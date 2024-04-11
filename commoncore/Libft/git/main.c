@@ -1,5 +1,5 @@
 #include "libft.h"
-#include <string.h>
+#include <stdlib.h>
 
 //check ft_is...
 /*int main()
@@ -18,6 +18,18 @@
 	printf("len 1: %d\n",ft_strlen("a"));
 	printf("len 2: %d\n",ft_strlen("a "));
 	printf("len 11: %d\n",ft_strlen("a # asv123\n"));
+}*/
+
+//check ft_strlcpy
+/*int main()
+{
+	const char src[20] = "Hello";
+
+	char dest1[20] = "World";
+
+	ft_strlcpy(dest1,src ,5);
+	
+	printf("%s", dest1);
 }*/
 
 // check ft_memset
@@ -79,14 +91,10 @@
 	return 0;
 }*/
 
-//check ft_strlcpy
+//check ft_atoi
 int main()
 {
-	const char src[20] = "Hello";
+	printf("-1234:%d", atoi(" -1234"));
 
-	char dest1[20] = "World";
-
-	strlcpy(dest1,src ,5);
-	
-	printf("%s", dest1);
+	printf("-1234:%d", ft_atoi(" -1234"));
 }
