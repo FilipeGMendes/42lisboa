@@ -53,7 +53,7 @@
     return 0;
 }*/
 
-//check memcpy
+//check ft_memcpy
 /*int main()
 {
 	char	str1[] = "por tapar";
@@ -65,8 +65,8 @@
 	printf("tapado:%s\n",str1);
 }*/
 
-//check memmove
-int main()
+//check ft_memmove
+/*int main()
 {
 	char src[20] = "e do src";
 	char dest[20];
@@ -77,4 +77,16 @@ int main()
 	printf("after ft_memmove\nsrc:%s\ndest:%s\n", src, dest);
 	
 	return 0;
+}*/
+
+//check ft_strlcpy
+int main()
+{
+	const char src[20] = "Hello";
+
+	char dest1[20] = "World";
+
+	strlcpy(dest1,src ,5);
+	
+	printf("%s", dest1);
 }
