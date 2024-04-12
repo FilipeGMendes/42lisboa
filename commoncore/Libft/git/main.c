@@ -29,8 +29,33 @@
 
 	ft_strlcpy(dest1,src ,5);
 	
-	printf("%s", dest1);
+	printf("%zu", dest1);
 }*/
+
+//check ft_strlcat
+/*int main()
+{
+	const char src[] = "123456789";
+
+	char dest1[] = "124563";
+	
+	printf("%zu\n", ft_strlcat(dest1,src ,3));
+}*/
+
+//check strchr
+/*int main()
+{
+	printf("%s\n", ft_strchr("abacate",'c'));
+
+	printf("%s\n", strchr("abacate", 'c'));
+}*/
+//check strrchr
+int main()
+{
+	printf("%s\n", ft_strrchr("abacacte",'c'));
+
+	printf("%s\n", strrchr("abacacte", 'c'));
+}
 
 // check ft_memset
 /*int main()
@@ -92,9 +117,18 @@
 }*/
 
 //check ft_atoi
-int main()
+/*int main()
 {
-	printf("-1234:%d", atoi(" -1234"));
+	printf("-1234:%d\n", atoi(" -1234"));
 
-	printf("-1234:%d", ft_atoi(" -1234"));
-}
+	printf("-1234:%d\n", ft_atoi(" -1234"));
+}*/
+
+//check toupper/lower
+/*int main()
+{
+	printf("ABC :%c%c%c\n", ft_toupper('a'), ft_toupper('b'), ft_toupper('c'));
+
+	printf("abc :%c%c%c\n", ft_tolower('A'), ft_tolower('B'), ft_tolower('C'));
+}*/
+
