@@ -1,5 +1,6 @@
 #include "libft.h"
 #include <stdlib.h>
+#include <string.h>
 
 //check ft_is...
 /*int main()
@@ -50,11 +51,24 @@
 	printf("%s\n", strchr("abacate", 'c'));
 }*/
 //check strrchr
-int main()
+/*int main()
 {
 	printf("%s\n", ft_strrchr("abacacte",'c'));
 
 	printf("%s\n", strrchr("abacacte", 'c'));
+}*/
+//check strncmp
+/*int main()
+{
+	printf("%d\n", ft_strncmp("abacate", "abacate", 5));
+
+	printf("%d\n", strncmp("abacate", "abacate", 5));
+}*/
+//check strnstr
+int main()
+{
+	printf("%s\n", strnstr("hello WorlWorld!", "World",16));
+	printf("%s\n", ft_strnstr("hello WorlWorld!", "World",16));
 }
 
 // check ft_memset
@@ -114,6 +128,31 @@ int main()
 	printf("after ft_memmove\nsrc:%s\ndest:%s\n", src, dest);
 	
 	return 0;
+}*/
+
+//check memchr
+/*int main() {
+    const char str[] = "ABCDEFG";
+    const char *result;
+
+    // Search for the character 'D' in the string
+    result = ft_memchr(str, 'D', 3);
+
+    if (result != NULL) {
+        printf("Character 'D' found at position %ld\n", result - str + 1);
+    } else {
+        printf("Character 'D' not found\n");
+    }
+
+    return 0;
+}*/
+
+//chech memcmp
+/*int main()
+{
+	printf("%d\n", ft_memcmp("abecate", "abacate",4));
+
+	printf("%d\n", memcmp("abecate", "abacate",4));
 }*/
 
 //check ft_atoi
