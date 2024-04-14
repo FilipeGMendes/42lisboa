@@ -50,6 +50,7 @@
 
 	printf("%s\n", strchr("abacate", 'c'));
 }*/
+
 //check strrchr
 /*int main()
 {
@@ -57,6 +58,7 @@
 
 	printf("%s\n", strrchr("abacacte", 'c'));
 }*/
+
 //check strncmp
 /*int main()
 {
@@ -64,12 +66,39 @@
 
 	printf("%d\n", strncmp("abacate", "abacate", 5));
 }*/
+
 //check strnstr
-int main()
+/*int main()
 {
 	printf("%s\n", strnstr("hello World!", "World",5));
 	printf("%s\n", ft_strnstr("hello World!", "World",5));
-}
+}*/
+
+//check ft_strdup
+/*int main()
+{
+    char *str1 = "Hello, world!";
+    char *str2 = strdup(str1);
+    char *str3 = ft_strdup(str1);
+
+    printf("str1: %s\n", str1);
+    printf("str2: %s\n", str2);
+    printf("str3: %s\n", str3);
+
+    if (strcmp(str2, str3) == 0)
+    {
+        printf("The two strings are the same.\n");
+    }
+    else
+    {
+        printf("The two strings are different.\n");
+    }
+
+    free(str2);
+    free(str3);
+
+    return 0;
+}*/
 
 // check ft_memset
 /*int main()
@@ -153,6 +182,44 @@ int main()
 	printf("%d\n", ft_memcmp("abecate", "abacate",4));
 
 	printf("%d\n", memcmp("abecate", "abacate",4));
+}*/
+
+//check  
+/*int main()
+{
+	int *ft_array;
+    int *libc_array;
+    int i;
+
+    ft_array = ft_calloc(10, sizeof(int));
+    libc_array = calloc(10, sizeof(int));
+
+    if (ft_array == NULL || libc_array == NULL)
+    {
+        printf("Memory allocation failed\n");
+        return 1;
+    }
+
+    for (i = 0; i < 10; i++)
+        ft_array[i] = i + 1;
+
+    for (i = 0; i < 10; i++)
+        libc_array[i] = i + 1;
+
+    for (i = 0; i < 10; i++)
+    {
+        if (ft_array[i]!= libc_array[i])
+        {
+            printf("ft_calloc and calloc produced different results\n");
+            return 1;
+        }
+		printf("ft_array[%d] = %d\n", i, ft_array[i]);//just to be visual
+		printf("libc_array[%d] = %d\n", i, libc_array[i]);//just to be visual
+    }
+
+    free(ft_array);
+    free(libc_array);
+    return 0;
 }*/
 
 //check ft_atoi
