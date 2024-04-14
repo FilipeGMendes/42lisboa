@@ -67,8 +67,8 @@
 //check strnstr
 int main()
 {
-	printf("%s\n", strnstr("hello WorlWorld!", "World",16));
-	printf("%s\n", ft_strnstr("hello WorlWorld!", "World",16));
+	printf("%s\n", strnstr("hello World!", "World",5));
+	printf("%s\n", ft_strnstr("hello World!", "World",5));
 }
 
 // check ft_memset
