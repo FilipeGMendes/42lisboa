@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: filipemendes <filipemendes@student.42.f    +#+  +:+       +#+        */
+/*   By: fguerrei <fguerrei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 14:19:56 by fguerrei          #+#    #+#             */
-/*   Updated: 2024/04/14 20:28:35 by filipemende      ###   ########.fr       */
+/*   Updated: 2024/04/15 13:38:09 by fguerrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,8 @@ char 	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char 	*ft_strdup(const char *s1);
 char 	*ft_strcpy(char *dest, const char *src);
 char 	*ft_substr(char const *s, unsigned int start, size_t len);
+char 	*ft_strjoin(char const *s1, char const *s2);
+char 	*ft_strtrim(char const *s1, char const *set);
 
 void 	*ft_memset(void *s, int c, size_t n);
 void 	ft_bzero(void *s, size_t n);

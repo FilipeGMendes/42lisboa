@@ -68,11 +68,10 @@
 }*/
 
 //check strnstr
-/*int main()
+int main()
 {
-	printf("%s\n", strnstr("hello World!", "World",5));
-	printf("%s\n", ft_strnstr("hello World!", "World",5));
-}*/
+	printf("%s\n", ft_strnstr("w o r l d", "World",9));
+}
 
 //check ft_strdup
 /*int main()
@@ -98,6 +97,25 @@
     free(str3);
 
     return 0;
+}*/
+
+//check ft_substr
+/*int main()
+{
+    char *str1 = "Hello, world!";
+    char *subs1 = ft_substr(str1, 7, 5);
+
+    printf("orignal :%s", str1);
+    printf("substring :%s", subs1);
+}*/
+
+//check ft_strjoin
+/*int main()
+{
+    char *s1 = "Hello ";
+    char *s2 = "world!";
+
+    printf("%s",ft_strjoin(s1, s2));
 }*/
 
 // check ft_memset
@@ -184,7 +202,7 @@
 	printf("%d\n", memcmp("abecate", "abacate",4));
 }*/
 
-//check  
+//check ft_calloc
 /*int main()
 {
 	int *ft_array;
