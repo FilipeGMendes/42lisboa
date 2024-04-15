@@ -60,12 +60,12 @@
 }*/
 
 //check strncmp
-int main()
+/*int main()
 {
 	printf("%d\n", ft_strncmp("testing", "tasting", 1));
 
 	printf("%d\n", strncmp("testing", "tasting", 1));
-}
+}*/
 
 //check strnstr
 /*int main()
@@ -117,6 +117,15 @@ int main()
 
     printf("%s",ft_strjoin(s1, s2));
 }*/
+
+//check ft_strtrim
+int main()
+{
+    char *str = "   Hello, World!   ";
+    char *set = " ";
+
+    printf("%s", ft_strtrim(str, set));
+}
 
 // check ft_memset
 /*int main()
