@@ -6,7 +6,7 @@
 /*   By: fguerrei <fguerrei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/14 16:04:21 by filipemende       #+#    #+#             */
-/*   Updated: 2024/04/15 15:36:39 by fguerrei         ###   ########.fr       */
+/*   Updated: 2024/04/15 16:12:47 by fguerrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,6 @@ char *ft_strdup(const char *s1)
 
 	if (dest == NULL)
 		return (NULL);
-	ft_strcpy(dest, s1);
+	ft_strcpy(dest, (char *)s1);
 	return (dest);
 }

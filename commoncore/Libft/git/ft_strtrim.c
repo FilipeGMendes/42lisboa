@@ -6,13 +6,13 @@
 /*   By: fguerrei <fguerrei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 13:39:21 by fguerrei          #+#    #+#             */
-/*   Updated: 2024/04/15 15:52:59 by fguerrei         ###   ########.fr       */
+/*   Updated: 2024/04/15 16:11:22 by fguerrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int 
+/*static int 
 		ft_isset(char c, char const *set)
 {
 	int i;
@@ -25,9 +25,10 @@ static int
 		i++;
 	}
 	return (0);
-}
+}*/
 
-char	*strtrim(char const *s, char const *set)
+/*char	*strtrim(char const *s, char const *set)
 {
 	
-}
+	return NULL;
+}*/

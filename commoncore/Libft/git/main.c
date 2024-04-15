@@ -60,18 +60,18 @@
 }*/
 
 //check strncmp
-/*int main()
-{
-	printf("%d\n", ft_strncmp("abacate", "abacate", 5));
-
-	printf("%d\n", strncmp("abacate", "abacate", 5));
-}*/
-
-//check strnstr
 int main()
 {
-	printf("%s\n", ft_strnstr("w o r l d", "World",9));
+	printf("%d\n", ft_strncmp("testing", "tasting", 1));
+
+	printf("%d\n", strncmp("testing", "tasting", 1));
 }
+
+//check strnstr
+/*int main()
+{
+	printf("%s\n", ft_strnstr("w o r l d", "World",9));
+}*/
 
 //check ft_strdup
 /*int main()
