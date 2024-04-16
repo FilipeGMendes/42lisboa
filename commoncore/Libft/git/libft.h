@@ -6,7 +6,7 @@
 /*   By: fguerrei <fguerrei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 14:19:56 by fguerrei          #+#    #+#             */
-/*   Updated: 2024/04/15 16:11:45 by fguerrei         ###   ########.fr       */
+/*   Updated: 2024/04/16 11:26:02 by fguerrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ char 	*ft_strdup(const char *s1);
 char 	*ft_substr(char const *s, unsigned int start, size_t len);
 char 	*ft_strjoin(char const *s1, char const *s2);
 char 	*ft_strtrim(char const *s1, char const *set);
+char 	**ft_split(char const *s, char c);
 
 void 	*ft_memset(void *s, int c, size_t n);
 void 	ft_bzero(void *s, size_t n);

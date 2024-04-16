@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-//check ft_is...
+/*         ft_is...        */
 /*int main()
 {
 	printf("alpha:%d\n", ft_isalpha('a'));
@@ -13,7 +13,7 @@
 	return 0;
 }*/
 
-// check ft_strlen
+/*         ft_strlen        */     
 /*int main()
 {
 	printf("len 1: %d\n",ft_strlen("a"));
@@ -21,7 +21,7 @@
 	printf("len 11: %d\n",ft_strlen("a # asv123\n"));
 }*/
 
-//check ft_strlcpy
+/*         ft_strlcpy        */
 /*int main()
 {
 	const char src[20] = "Hello";
@@ -33,7 +33,7 @@
 	printf("%zu", dest1);
 }*/
 
-//check ft_strlcat
+/*         ft_strlcat        */
 /*int main()
 {
 	const char src[] = "123456789";
@@ -43,7 +43,7 @@
 	printf("%zu\n", ft_strlcat(dest1,src ,3));
 }*/
 
-//check strchr
+/*         strchr        */
 /*int main()
 {
 	printf("%s\n", ft_strchr("abacate",'c'));
@@ -51,7 +51,7 @@
 	printf("%s\n", strchr("abacate", 'c'));
 }*/
 
-//check strrchr
+/*         strrchr        */
 /*int main()
 {
 	printf("%s\n", ft_strrchr("abacacte",'c'));
@@ -59,7 +59,7 @@
 	printf("%s\n", strrchr("abacacte", 'c'));
 }*/
 
-//check strncmp
+/*         strncmp        */
 /*int main()
 {
 	printf("%d\n", ft_strncmp("testing", "tasting", 1));
@@ -67,13 +67,13 @@
 	printf("%d\n", strncmp("testing", "tasting", 1));
 }*/
 
-//check strnstr
+/*         strnstr        */
 /*int main()
 {
 	printf("%s\n", ft_strnstr("w o r l d", "World",9));
 }*/
 
-//check ft_strdup
+/*         ft_strdup        */
 /*int main()
 {
     char *str1 = "Hello, world!";
@@ -99,7 +99,7 @@
     return 0;
 }*/
 
-//check ft_substr
+/*         ft_substr        */
 /*int main()
 {
     char *str1 = "Hello, world!";
@@ -109,7 +109,7 @@
     printf("substring :%s", subs1);
 }*/
 
-//check ft_strjoin
+/*         ft_strjoin        */
 /*int main()
 {
     char *s1 = "Hello ";
@@ -118,16 +118,37 @@
     printf("%s",ft_strjoin(s1, s2));
 }*/
 
-//check ft_strtrim
-int main()
+/*         ft_strtrim        */
+/*int main()
 {
     char *str = "   Hello, World!   ";
     char *set = " ";
 
     printf("%s", ft_strtrim(str, set));
+}*/
+
+/*        check ft_split        */
+int		main(void)
+{
+	int		str_n;
+	char	*str;
+	char	sep;
+	char	**strs;
+
+	str = "ola-a-todos-!";
+	sep = '-';
+	strs = ft_split(str, sep);
+	str_n = 0;
+	while (strs[str_n] != 0)
+	{
+		printf("[%d]: %s\n", str_n, strs[str_n]);
+		str_n++;
+	}
+	free(strs);
+	return (0);
 }
 
-// check ft_memset
+/*          ft_memset        */
 /*int main()
 {
 	char str1[16] = "after is 4dots !";
@@ -137,7 +158,7 @@ int main()
 
 }*/
 
-//check ft_bzero
+/*         ft_bzero        */
 /*int main()
 {
     char str1[20] = "Hello, World!";
@@ -160,7 +181,7 @@ int main()
     return 0;
 }*/
 
-//check ft_memcpy
+/*         ft_memcpy        */
 /*int main()
 {
 	char	str1[] = "por tapar";
@@ -172,7 +193,7 @@ int main()
 	printf("tapado:%s\n",str1);
 }*/
 
-//check ft_memmove
+/*         ft_memmove        */
 /*int main()
 {
 	char src[20] = "e do src";
@@ -186,7 +207,7 @@ int main()
 	return 0;
 }*/
 
-//check memchr
+/*         memchr        */
 /*int main() {
     const char str[] = "ABCDEFG";
     const char *result;
@@ -203,7 +224,7 @@ int main()
     return 0;
 }*/
 
-//chech memcmp
+/*         memcmp        */
 /*int main()
 {
 	printf("%d\n", ft_memcmp("abecate", "abacate",4));
@@ -211,7 +232,7 @@ int main()
 	printf("%d\n", memcmp("abecate", "abacate",4));
 }*/
 
-//check ft_calloc
+/*         ft_calloc        */
 /*int main()
 {
 	int *ft_array;
@@ -249,7 +270,7 @@ int main()
     return 0;
 }*/
 
-//check ft_atoi
+/*         ft_atoi        */
 /*int main()
 {
 	printf("-1234:%d\n", atoi(" -1234"));
@@ -257,7 +278,7 @@ int main()
 	printf("-1234:%d\n", ft_atoi(" -1234"));
 }*/
 
-//check toupper/lower
+/*         toupper/lower        */
 /*int main()
 {
 	printf("ABC :%c%c%c\n", ft_toupper('a'), ft_toupper('b'), ft_toupper('c'));
