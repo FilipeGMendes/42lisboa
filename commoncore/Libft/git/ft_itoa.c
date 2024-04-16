@@ -1,18 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: filipemendes <filipemendes@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/11 19:33:26 by filipemende       #+#    #+#             */
-/*   Updated: 2024/04/16 18:18:32 by filipemende      ###   ########.fr       */
+/*   Created: 2024/04/16 17:48:48 by filipemende       #+#    #+#             */
+/*   Updated: 2024/04/16 18:17:36 by filipemende      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_tolower(int c)
+#include "libft.h"
+
+char	*ft_itoa(int n)
 {
-	if (c >= 'A' && c <= 'Z')
-		return (c + 32);
-	return (c);
+	char *str;
+
+	str = malloc(sizeof(char) * 12);
+	if (n == -2147483648)
+	{
+		str[0] = "-";
+		str[1] = "2";
+		n = 147483648;
+	}
+	if (n < 0)
+	{
+		str[0] = '-';
+		n = -n;
+	}
+	if (n < 10)
+		return (str);
+	if (n > 10)
+		ft_itoa(n / 10);
+	str[ft_strlen(str)] = n % 10 + '0';
+	return (str);
 }

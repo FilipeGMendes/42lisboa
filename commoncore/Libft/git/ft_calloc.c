@@ -6,13 +6,13 @@
 /*   By: filipemendes <filipemendes@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/14 13:29:54 by filipemende       #+#    #+#             */
-/*   Updated: 2024/04/14 15:49:21 by filipemende      ###   ########.fr       */
+/*   Updated: 2024/04/16 18:17:06 by filipemende      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_calloc(size_t count, size_t size)
+void	*ft_calloc(size_t count, size_t size)
 {
 	void *ptr;
 
