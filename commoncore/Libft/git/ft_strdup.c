@@ -6,15 +6,13 @@
 /*   By: filipemendes <filipemendes@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/14 16:04:21 by filipemende       #+#    #+#             */
-/*   Updated: 2024/04/16 18:18:03 by filipemende      ###   ########.fr       */
+/*   Updated: 2024/04/18 14:20:41 by fguerrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char
-	*
-	ft_strcpy(char *dest, char *src)
+static char	*ft_strcpy(char *dest, char *src)
 {
 	int	i;
 
@@ -30,12 +28,11 @@ static char
 
 char	*ft_strdup(const char *s1)
 {
-	char *dest;
-	size_t len;
+	char	*dest;
+	size_t	len;
 
 	len = ft_strlen(s1);
 	dest = malloc(sizeof(char) * (len + 1));
-
 	if (dest == NULL)
 		return (NULL);
 	ft_strcpy(dest, (char *)s1);

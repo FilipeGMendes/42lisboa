@@ -12,8 +12,7 @@
 
 #include "libft.h"
 
-static int
-ft_isset(char c, char const *set)
+static int	ft_isset(char c, char const *set)
 {
 	int	i;
 
@@ -29,13 +28,12 @@ ft_isset(char c, char const *set)
 
 char	*ft_strtrim(char const *s, char const *set)
 {
-	char *trimmed;
-	char *start;
-	char *end;
+	char	*trimmed;
+	char	*start;
+	char	*end;
 
 	start = (char *)s;
 	end = (char *)s + ft_strlen(s) - 1;
-
 	if (!s || !*s)
 		return (NULL);
 	while (ft_isset(*start, set))

@@ -37,15 +37,13 @@ static int	ft_countwords(char const *s, char c)
 
 char	**ft_split(char const *s, char c)
 {
-	char **result;
-	size_t i;
-	size_t j;
+	char	**result;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	j = 0;
 	result = (char **)malloc(sizeof(char *) * (ft_countwords(s, c) + 1));
-	if (!result)
-		return (NULL);
 	while (*s)
 	{
 		while (*s && *s == c)

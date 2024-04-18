@@ -121,14 +121,14 @@
 /*         ft_strtrim        */
 /*int main()
 {
-    char *str = "   Hello, World!   ";
-    char *set = " ";
+    char *str = "te  Hello,te World!  et ";
+    char *set = "te";
 
     printf("%s", ft_strtrim(str, set));
 }*/
 
 /*        check ft_split        */
-int		main(void)
+/*int		main(void)
 {
 	int		str_n;
 	char	*str;
@@ -146,7 +146,7 @@ int		main(void)
 	}
 	free(strs);
 	return (0);
-}
+}*/
 
 /*          ft_memset        */
 /*int main()
@@ -182,29 +182,39 @@ int		main(void)
 }*/
 
 /*         ft_memcpy        */
-/*int main()
+/*int main(void)
 {
-	char	str1[] = "por tapar";
-	char	str2[] = "tapado";
-
-	printf("por tapar:%s\n",str1);
-	
-	ft_memcpy(str1, str2, sizeof(str2));
-	printf("tapado:%s\n",str1);
+    char src[50] = "Hello, World!";
+    char dst[50];
+    char dst2[50];
+    size_t n = 10;
+    // Test with overlapping memory regions
+    memcpy(dst, src, n);
+    ft_memcpy(dst2, src, n);
+    printf("Original string: %s\n", src);
+    printf("memcpy result: %s\n", dst);
+    printf("ft_memcpy result: %s\n", dst2);
+    // Test with non-overlapping memory regions
+    memcpy(dst, src + n, n);
+    ft_memcpy(dst2, src + n, n);
+    printf("Original string: %s\n", src);
+    printf("memcpy result: %s\n", dst);
+    printf("ft_memcpy result: %s\n", dst2);
+    return (0);
 }*/
 
 /*         ft_memmove        */
-/*int main()
+/*int	main(void)
 {
-	char src[20] = "e do src";
-	char dest[20];
+	char    src[] = "12345";
+    char    dest[50] = "12345";
+    
+    memmove(dest + 5, src + 3, 11);
+	printf("memmove result: %s\n", dest);
 
-	printf("before ft_memmove\nsrc:%s\ndest:%s\n", src, dest);
-
-	ft_memmove(dest, src,8);
-	printf("after ft_memmove\nsrc:%s\ndest:%s\n", src, dest);
-	
-	return 0;
+	ft_memmove(dest + 5, src + 3, 11);
+	printf("ft_memmove result: %s\n", dest);
+	return (0);
 }*/
 
 /*         memchr        */
@@ -213,7 +223,9 @@ int		main(void)
     const char *result;
 
     // Search for the character 'D' in the string
-    result = ft_memchr(str, 'D', 3);
+    result = ft_memchr(str, 'D', 5);
+
+    printf("%s\n", result);
 
     if (result != NULL) {
         printf("Character 'D' found at position %ld\n", result - str + 1);
@@ -278,6 +290,15 @@ int		main(void)
 	printf("-1234:%d\n", ft_atoi(" -1234"));
 }*/
 
+/*        ft_itoa        */
+int main()
+{
+    int n = -12345;
+    char *str = ft_itoa(n);
+    printf("%s\n", str);
+    free(str);
+    return 0;
+}
 /*         toupper/lower        */
 /*int main()
 {
@@ -285,4 +306,3 @@ int		main(void)
 
 	printf("abc :%c%c%c\n", ft_tolower('A'), ft_tolower('B'), ft_tolower('C'));
 }*/
-
