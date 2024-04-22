@@ -4,6 +4,7 @@ CFLAGS = -Wall -Werror -Wextra
 NAME = libft
 
 SRCS		=
+BONUS		=
 OBJS		= $(SRCS: .c = .o)
 INCLUDES	=./libft.h
 
