@@ -128,7 +128,7 @@
 }*/
 
 /*        check ft_split        */
-/*int		main(void)
+int		main(void)
 {
 	int		str_n;
 	char	*str;
@@ -141,12 +141,12 @@
 	str_n = 0;
 	while (strs[str_n] != 0)
 	{
-		printf("[%d]: %s\n", str_n, strs[str_n]);
+		printf("%s", strs[str_n]);
 		str_n++;
 	}
 	free(strs);
 	return (0);
-}*/
+}
 
 /*          ft_memset        */
 /*int main()
@@ -291,14 +291,15 @@
 }*/
 
 /*        ft_itoa        */
-int main()
+/*int main()
 {
     int n = -12345;
     char *str = ft_itoa(n);
     printf("%s\n", str);
     free(str);
     return 0;
-}
+}*/
+
 /*         toupper/lower        */
 /*int main()
 {

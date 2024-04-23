@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: filipemendes <filipemendes@student.42.f    +#+  +:+       +#+        */
+/*   By: fguerrei <fguerrei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 15:15:17 by filipemende       #+#    #+#             */
-/*   Updated: 2024/04/20 15:21:20 by filipemende      ###   ########.fr       */
+/*   Updated: 2024/04/23 12:14:24 by fguerrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 	i = 0;
 	while (s[i])
 	{
-		f(i, s[i]);
+		f(i, &s[i]);
 		i++;
 	}
 }
