@@ -34,12 +34,12 @@
 }*/
 
 /*         ft_strlcat        */
-int main()
+/*int main()
 {
 	char dest[11] = 'a';
 	
 	printf("%zu\n", ft_strlcat(dest, "lorem", 15));
-}
+}*/
 
 /*         strchr        */
 /*int main()
@@ -58,12 +58,12 @@ int main()
 }*/
 
 /*         strncmp        */
-/*int main()
+int main()
 {
-	printf("%d\n", ft_strncmp("testing", "tasting", 1));
+	printf("%d\n", ft_strncmp("test\200", "test\0", 6));
 
-	printf("%d\n", strncmp("testing", "tasting", 1));
-}*/
+	printf("%d\n", strncmp("test\200", "test\0", 6));
+}
 
 /*         strnstr        */
 /*int main()
