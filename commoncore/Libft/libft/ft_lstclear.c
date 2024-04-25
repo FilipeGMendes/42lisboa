@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fguerrei <fguerrei@student.42.fr>          +#+  +:+       +#+        */
+/*   By: filipemendes <filipemendes@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 14:04:20 by fguerrei          #+#    #+#             */
-/*   Updated: 2024/04/23 14:22:17 by fguerrei         ###   ########.fr       */
+/*   Updated: 2024/04/25 11:38:40 by filipemende      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,5 @@ void ft_lstclear(t_list **lst, void (*del)(void*))
 
 		*lst = temp;
 	}
-	free(*lst);
 	*lst = NULL;
 }
