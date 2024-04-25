@@ -58,12 +58,12 @@
 }*/
 
 /*         strncmp        */
-int main()
+/*int main()
 {
 	printf("%d\n", ft_strncmp("test\200", "test\0", 6));
 
 	printf("%d\n", strncmp("test\200", "test\0", 6));
-}
+}*/
 
 /*         strnstr        */
 /*int main()
@@ -281,12 +281,12 @@ int main()
 }*/
 
 /*         ft_atoi        */
-/*int main()
+int main()
 {
-	printf("-1234:%d\n", atoi(" -1234"));
+	printf("-1234:%d\n", atoi("\n\n\n  -46\b9 \n5d6"));
 
-	printf("-1234:%d\n", ft_atoi(" -1234"));
-}*/
+	printf("-1234:%d\n", ft_atoi("\n\n\n  -46\b9 \n5d6"));
+}
 
 /*        ft_itoa        */
 /*int main()
