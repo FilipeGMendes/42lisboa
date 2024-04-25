@@ -34,14 +34,12 @@
 }*/
 
 /*         ft_strlcat        */
-/*int main()
+int main()
 {
-	const char src[] = "123456789";
-
-	char dest1[] = "124563";
+	char dest[11] = 'a';
 	
-	printf("%zu\n", ft_strlcat(dest1,src ,3));
-}*/
+	printf("%zu\n", ft_strlcat(dest, "lorem", 15));
+}
 
 /*         strchr        */
 /*int main()
@@ -128,7 +126,7 @@
 }*/
 
 /*        check ft_split        */
-int		main(void)
+/*int		main(void)
 {
 	int		str_n;
 	char	*str;
@@ -146,7 +144,7 @@ int		main(void)
 	}
 	free(strs);
 	return (0);
-}
+}*/
 
 /*          ft_memset        */
 /*int main()
@@ -239,9 +237,9 @@ int		main(void)
 /*         memcmp        */
 /*int main()
 {
-	printf("%d\n", ft_memcmp("abecate", "abacate",4));
+	printf("%d\n", ft_memcmp("t\200", "t\0",2));
 
-	printf("%d\n", memcmp("abecate", "abacate",4));
+	printf("%d\n", memcmp("t\200", "t\0",2));
 }*/
 
 /*         ft_calloc        */
