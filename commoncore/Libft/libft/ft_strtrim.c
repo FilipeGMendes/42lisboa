@@ -6,7 +6,7 @@
 /*   By: filipemendes <filipemendes@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 13:39:21 by fguerrei          #+#    #+#             */
-/*   Updated: 2024/04/16 18:18:28 by filipemende      ###   ########.fr       */
+/*   Updated: 2024/04/28 20:28:05 by filipemende      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ char	*ft_strtrim(char const *s, char const *set)
 		end--;
 	if (start >= end)
 		return (ft_strdup(""));
-	trimmed = malloc(sizeof(char) * (end - start + 1));
+	trimmed = ft_calloc(sizeof(char), (end - start + 1));
 	ft_memcpy(trimmed, start, end - start + 1);
 	trimmed[end - start + 1] = '\0';
 	return (trimmed);
