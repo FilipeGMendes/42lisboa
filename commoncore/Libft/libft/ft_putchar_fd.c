@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: filipemendes <filipemendes@student.42.f    +#+  +:+       +#+        */
+/*   By: fguerrei <fguerrei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 15:23:00 by filipemende       #+#    #+#             */
-/*   Updated: 2024/04/20 15:26:19 by filipemende      ###   ########.fr       */
+/*   Updated: 2024/04/29 11:04:45 by fguerrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

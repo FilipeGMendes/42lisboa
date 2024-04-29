@@ -6,7 +6,7 @@
 /*   By: fguerrei <fguerrei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 11:28:50 by fguerrei          #+#    #+#             */
-/*   Updated: 2024/04/23 15:42:07 by fguerrei         ###   ########.fr       */
+/*   Updated: 2024/04/29 10:58:03 by fguerrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,16 @@ static int	ft_countwords(char const *s, char c)
 	return (count);
 }
 
+char	*findchr(char *s, char c)
+{
+	int	i;
+
+	i = 0;
+	while (s[i] && s[i] == c)
+		i++;
+	return (&s[i]);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	**result;
@@ -43,18 +53,18 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	j = 0;
-	if (!(result = (char **)malloc(sizeof(char *) * (ft_countwords(s, c) + 1))))
+	result = (char **)malloc(sizeof(char *) * (ft_countwords(s, c) + 1));
+	if (!result)
 		return (NULL);
 	while (*s)
 	{
-		while (*s && *s == c)
-			s++;
+		s = findchr((char *)s, c);
 		if (*s)
 		{
 			if (!ft_strchr(s, c))
 				j = ft_strlen(s);
 			else
-				j = ft_strchr(s, c) - s;
+				j = ft_strchr(s, c) - (char *)s;
 			result[i] = ft_substr(s, 0, j);
 			s += j;
 			i++;

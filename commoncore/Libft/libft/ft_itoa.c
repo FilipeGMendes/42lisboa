@@ -6,7 +6,7 @@
 /*   By: fguerrei <fguerrei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 17:48:48 by filipemende       #+#    #+#             */
-/*   Updated: 2024/04/18 13:52:31 by fguerrei         ###   ########.fr       */
+/*   Updated: 2024/04/29 14:33:58 by fguerrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,8 @@ char	*ft_itoa(int n)
 	int		len;
 	int		i;
 
+	if (n == -2147483648)
+		return ("-2147483648");
 	len = countdigits(n);
 	str = malloc(sizeof(char) * (len + 1));
 	if (str == NULL)

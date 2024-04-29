@@ -117,33 +117,92 @@
 }*/
 
 /*         ft_strtrim        */
-/*int main()
+/*void	ft_print_result(char const *s)
 {
-    char *str = "te  Hello,te World!  et ";
-    char *set = "te";
+	int		len;
 
-    printf("%s", ft_strtrim(str, set));
+	len = 0;
+	while (s[len])
+		len++;
+	write(1, s, len);
+}
+
+int		main(int argc, const char *argv[])
+{
+	char	*strtrim;
+	int		arg;
+
+	alarm(5);
+	if (argc == 1)
+		return (0);
+	else if ((arg = atoi(argv[1])) == 1)
+	{
+		char s1[] = "lorem \n ipsum \t dolor \n sit \t amet";
+		if (!(strtrim = ft_strtrim(s1, " ")))
+			ft_print_result("NULL");
+		else
+			ft_print_result(strtrim);
+		if (strtrim == s1)
+			ft_print_result("\nA new string was not returned");
+	}
+	else if (arg == 2)
+	{
+		char s1[] = "lorem ipsum dolor sit amet";
+		if (!(strtrim = ft_strtrim(s1, "te")))
+			ft_print_result("NULL");
+		else
+			ft_print_result(strtrim);
+		if (strtrim == s1)
+			ft_print_result("\nA new string was not returned");
+	}
+	else if (arg == 3)
+	{
+		char s1[] = " lorem ipsum dolor sit amet";
+		if (!(strtrim = ft_strtrim(s1, "l ")))
+			ft_print_result("NULL");
+		else
+			ft_print_result(strtrim);
+		if (strtrim == s1)
+			ft_print_result("\nA new string was not returned");
+	}
+	else if (arg == 4)
+	{
+		char s1[] = "lorem ipsum dolor sit amet";
+		if (!(strtrim = ft_strtrim(s1, "tel")))
+			ft_print_result("NULL");
+		else
+			ft_print_result(strtrim);
+		if (strtrim == s1)
+			ft_print_result("\nA new string was not returned");
+	}
+	else if (arg == 5)
+	{
+		char s1[] = "          ";
+		if (!(strtrim = ft_strtrim(s1, " ")))
+			ft_print_result("NULL");
+		else
+			ft_print_result(strtrim);
+		if (strtrim == s1)
+			ft_print_result("\nA new string was not returned");
+	}
+	return (0);
 }*/
 
 /*        check ft_split        */
-/*int		main(void)
+/*int main(void)
 {
-	int		str_n;
-	char	*str;
-	char	sep;
-	char	**strs;
-
-	str = "ola-a-todos-!";
-	sep = '-';
-	strs = ft_split(str, sep);
-	str_n = 0;
-	while (strs[str_n] != 0)
+	char *str = "Hello I am here";
+	char **split = ft_split(str, ' ');
+	if (split)
 	{
-		printf("%s", strs[str_n]);
-		str_n++;
+		for (int i = 0; split[i]; i++)
+			printf("%s\n", split[i]);
 	}
-	free(strs);
-	return (0);
+	else
+	{
+		printf("Split failed\n");
+	}
+	return 0;
 }*/
 
 /*          ft_memset        */
@@ -281,22 +340,21 @@
 }*/
 
 /*         ft_atoi        */
-int main()
+/*int main()
 {
 	printf("-1234:%d\n", atoi("\n\n\n  -46\b9 \n5d6"));
 
 	printf("-1234:%d\n", ft_atoi("\n\n\n  -46\b9 \n5d6"));
-}
+}*/
 
 /*        ft_itoa        */
-/*int main()
+int main()
 {
-    int n = -12345;
-    char *str = ft_itoa(n);
+    char *str = ft_itoa(-2147483648LL);
     printf("%s\n", str);
     free(str);
     return 0;
-}*/
+}
 
 /*         toupper/lower        */
 /*int main()
