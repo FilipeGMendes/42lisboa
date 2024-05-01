@@ -6,36 +6,11 @@
 /*   By: fguerrei <fguerrei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 13:39:21 by fguerrei          #+#    #+#             */
-/*   Updated: 2024/04/29 12:02:58 by fguerrei         ###   ########.fr       */
+/*   Updated: 2024/05/01 10:58:06 by fguerrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/*char	*ft_strtrim(char const *s1, char const *set)
-{
-	int		start;
-	int		end;
-	char	*str;
-
-	start = 0;
-	end = ft_strlen(s1) - 1;
-	if (!s1 || !set)
-		return (NULL);
-	if (!*s1)
-		return (ft_strdup(s1));
-	while (*(s1 + start) && ft_strchr(set, *(s1 + start)))
-		start++;
-	while (end >= 0 && ft_strchr(set, *(s1 + end)))
-		end--;
-	if (start > end)
-		return (ft_strdup(""));
-	str = malloc(sizeof(char) * (end - start + 2));
-	if (!str)
-		return (NULL);
-	ft_strlcpy(str, (char *)s1 + start, (end - start) + 2);
-	return (str);
-}*/
 
 static int	ft_isset(char c, char const *set)
 {
@@ -72,3 +47,18 @@ char	*ft_strtrim(char const *s, char const *set)
 	trimmed[end - start + 1] = '\0';
 	return (trimmed);
 }
+/*int main()
+{
+	char *str = "  lwatch this be trimmedl  "
+	char *trimmed;
+	
+	trimmed = ft_strtrim(str, " l")
+	
+	printf("before: %s\nafter: %s\n", str, trimmed);
+	return	0
+}*/
+/*	this function trims a string
+	it removes the characters specified in the set string
+	from the start and the end of the string s
+	without removing the set characters from the middle of s
+*/

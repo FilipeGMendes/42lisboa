@@ -6,13 +6,57 @@
 /*   By: fguerrei <filipe0505mendes@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 10:32:57 by fguerrei          #+#    #+#             */
-/*   Updated: 2024/05/01 12:35:06 by fguerrei         ###   ########.fr       */
+/*   Updated: 2024/05/01 17:14:37 by fguerrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
+int	put_format(char specifier, va_list ap)
+{
+	int	i;
+
+	i = 0;
+	if (specifier == 'c')
+		i += ft_puchar(va_arg(ap, char));
+	else if (specifier == 's')
+		i += ft_putstr(va_arg(ap, char *));
+	else if (specifier == 'd')
+		i += ft_putdigit(va_arg(ap, int), 10);
+	else if (specifier == 'x')
+		i += ft_putdigit(va_arg(ap, int), 16);
+	else
+		i += write(1, &specifier, 1);
+	return (i);
+}
+
 int	ft_printf(const char *format, ...)
 {
+	va_list	ap;
+	long int i;
 	
+	va_start(ap, format);
+	i = 0;
+	while (*format)
+	{
+		if (format == '%')
+		{
+			put_format(*(++format), ap);
+			i++;
+		}
+		else
+		{
+			write(1, format, 1);
+			i++;
+		}
+		format++;
+	}
+	va_end(ap);
+	return (i);
+}
+
+int main()
+{
+	ft_printf("Hello %sWorld");
+	return (0);
 }

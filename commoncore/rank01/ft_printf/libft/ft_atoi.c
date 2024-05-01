@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: filipemendes <filipemendes@student.42.f    +#+  +:+       +#+        */
+/*   By: fguerrei <fguerrei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/11 19:35:22 by filipemende       #+#    #+#             */
-/*   Updated: 2024/04/25 19:48:54 by filipemende      ###   ########.fr       */
+/*   Created: 2024/04/30 10:33:16 by fguerrei          #+#    #+#             */
+/*   Updated: 2024/04/30 10:48:49 by fguerrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,3 +43,14 @@ int	ft_atoi(const char *str)
 	}
 	return (result * sign);
 }
+/*
+int main()
+{
+	printf("-1234:%d", ft_atoi(" -1234"));
+	printf("-1234:%d", atoi(" -1234"));
+	return	0;
+}*/
+//function to convert string to int;
+//can start with spaces
+//only 1 "+", "-" sign;
+//stops at the first non digit;

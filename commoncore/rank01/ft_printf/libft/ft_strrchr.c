@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fguerrei <fguerrei@student.42.fr>          +#+  +:+       +#+        */
+/*   By: fguerrei <filipe0505mendes@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 14:53:11 by fguerrei          #+#    #+#             */
-/*   Updated: 2024/04/29 10:08:17 by fguerrei         ###   ########.fr       */
+/*   Updated: 2024/05/01 13:50:11 by fguerrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,3 +31,12 @@ char	*ft_strrchr(const char *s, int c)
 		return (&str[i]);
 	return (0);
 }
+/*int main()
+{
+	printf("%s\n", ft_strrchr("abacacte",'c'));
+
+	printf("%s\n", strrchr("abacacte", 'c'));
+}*/
+/*	the function does the same as strchr,
+	but locates the last occurrence of the character
+*/

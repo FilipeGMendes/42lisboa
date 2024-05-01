@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: filipemendes <filipemendes@student.42.f    +#+  +:+       +#+        */
+/*   By: fguerrei <fguerrei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/13 11:30:30 by filipemende       #+#    #+#             */
-/*   Updated: 2024/04/16 18:17:39 by filipemende      ###   ########.fr       */
+/*   Created: 2024/04/30 10:35:08 by fguerrei          #+#    #+#             */
+/*   Updated: 2024/04/30 12:32:33 by fguerrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,3 +29,26 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
+/*int main() {
+    const char str[] = "ABCDEFG";
+    const char *result;
+
+    // Search for the character 'D' in the string
+    result = ft_memchr(str, 'D', 5);
+
+    printf("%s\n", result);
+
+    if (result != NULL) {
+        printf("Character 'D' found at position %ld\n", result - str + 1);
+    } else {
+        printf("Character 'D' not found\n");
+    }
+
+    return 0;
+}*/
+//the function works similarly as strchr
+//the difference is
+//memchr works with byte string (void *)
+//strchr works with literal strings (char *)
+//memchr also has a third parameter
+//it tells the function how many bytes we want to search in

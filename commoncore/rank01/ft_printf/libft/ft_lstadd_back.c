@@ -6,7 +6,7 @@
 /*   By: fguerrei <fguerrei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 11:44:38 by fguerrei          #+#    #+#             */
-/*   Updated: 2024/04/29 15:15:29 by fguerrei         ###   ########.fr       */
+/*   Updated: 2024/05/01 11:35:38 by fguerrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,3 +22,6 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 			ft_lstlast(*lst)->next = new;
 	}
 }
+/* this function adds a new element
+	to the end of the existing list
+*/

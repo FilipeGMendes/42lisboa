@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: filipemendes <filipemendes@student.42.f    +#+  +:+       +#+        */
+/*   By: fguerrei <fguerrei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/09 12:42:42 by fguerrei          #+#    #+#             */
-/*   Updated: 2024/04/16 18:17:24 by filipemende      ###   ########.fr       */
+/*   Created: 2024/04/30 10:33:55 by fguerrei          #+#    #+#             */
+/*   Updated: 2024/04/30 10:55:48 by fguerrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,3 +16,15 @@ int	ft_isascii(int c)
 		return (1);
 	return (0);
 }
+/*int main()
+{
+	printf("alpha:%d\n", ft_isascii('a'));
+	printf("digit:%d\n", ft_isascii('3'));
+	printf("special char:%d\n", ft_isascii('#'));
+	printf("spaces:%d\n", ft_isascii('\n'));
+
+	return 0;
+}*/
+//function to to check if a character is an ASCII character
+//returns 1 if it is
+//returns 0 if it is not

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: filipemendes <filipemendes@student.42.f    +#+  +:+       +#+        */
+/*   By: fguerrei <filipe0505mendes@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/11 19:27:55 by filipemende       #+#    #+#             */
-/*   Updated: 2024/04/16 18:18:34 by filipemende      ###   ########.fr       */
+/*   Created: 2024/04/30 10:37:31 by fguerrei          #+#    #+#             */
+/*   Updated: 2024/05/01 13:51:07 by fguerrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,3 +16,7 @@ int	ft_toupper(int c)
 		return (c - 32);
 	return (c);
 }
+/*	this function converts 
+	a lower case alphabetical character
+	to an upper case charater
+*/

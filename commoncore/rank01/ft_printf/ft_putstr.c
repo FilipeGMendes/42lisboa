@@ -1,20 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fguerrei <fguerrei@student.42.fr>          +#+  +:+       +#+        */
+/*   By: fguerrei <filipe0505mendes@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/01 11:43:26 by fguerrei          #+#    #+#             */
-/*   Updated: 2024/05/01 11:43:52 by fguerrei         ###   ########.fr       */
+/*   Created: 2024/05/01 16:12:58 by fguerrei          #+#    #+#             */
+/*   Updated: 2024/05/01 17:13:05 by fguerrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-int main()
+int	ft_putstr(char *str)
 {
-	printf("teste");
+	int	i;
 
-	return 0;
+	i = 0;
+	while (str[i] != '\0')
+	{
+		write(1, &str[i], 1);
+		i++;
+	}
+	return (i);
 }

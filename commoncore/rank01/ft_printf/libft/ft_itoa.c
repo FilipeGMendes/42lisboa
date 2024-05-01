@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fguerrei <fguerrei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/16 17:48:48 by filipemende       #+#    #+#             */
-/*   Updated: 2024/04/29 14:33:58 by fguerrei         ###   ########.fr       */
+/*   Created: 2024/04/30 10:34:26 by fguerrei          #+#    #+#             */
+/*   Updated: 2024/05/01 11:12:15 by fguerrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,3 +58,13 @@ char	*ft_itoa(int n)
 	str[len] = '\0';
 	return (str);
 }
+/*int main()
+{
+    char *str = ft_itoa(-2147483648LL);
+    printf("%s\n", str);
+    free(str);
+    return 0;
+}*/
+/*	this function does the opposite of atoi
+	converting a number to a string
+*/
