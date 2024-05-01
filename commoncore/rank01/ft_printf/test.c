@@ -1,18 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   test.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fguerrei <filipe0505mendes@gmail.com>      +#+  +:+       +#+        */
+/*   By: fguerrei <fguerrei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/30 10:32:57 by fguerrei          #+#    #+#             */
-/*   Updated: 2024/05/01 12:35:06 by fguerrei         ###   ########.fr       */
+/*   Created: 2024/05/01 11:43:26 by fguerrei          #+#    #+#             */
+/*   Updated: 2024/05/01 11:43:52 by fguerrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-int	ft_printf(const char *format, ...)
+int main()
 {
-	
+	printf("teste");
+
+	return 0;
 }

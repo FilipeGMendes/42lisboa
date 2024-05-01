@@ -1,18 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fguerrei <filipe0505mendes@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/30 10:32:57 by fguerrei          #+#    #+#             */
-/*   Updated: 2024/05/01 12:35:06 by fguerrei         ###   ########.fr       */
+/*   Created: 2024/05/01 12:29:33 by fguerrei          #+#    #+#             */
+/*   Updated: 2024/05/01 12:34:33 by fguerrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
-int	ft_printf(const char *format, ...)
-{
-	
-}
+# include "libft.h"
+# include <stdarg.h>
+
+
+
+
+#endif
