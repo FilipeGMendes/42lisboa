@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fguerrei <fguerrei@student.42.fr>          +#+  +:+       +#+        */
+/*   By: fguerrei <filipe0505mendes@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 12:39:15 by fguerrei          #+#    #+#             */
-/*   Updated: 2024/04/30 11:50:21 by fguerrei         ###   ########.fr       */
+/*   Updated: 2024/05/01 13:47:33 by fguerrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,9 +50,11 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	printf("ft_memmove result: %s\n", dest);
 	return (0);
 }*/
-//the function does the same as the memcpy,
-//but the copy is made in a non destructive manner
-//both strings cna overlap
-//and the function does not overwrite part of or entirely
-// it first copies the bytes to be copied into a temporary array then pastes them into the destination
-// memcpy copies directly from the source to the destination
+/*	the function does the same as the memcpy,
+	but the copy is made in a non destructive manner
+	both strings cna overlap
+	and the function does not overwrite part of or entirely
+ 	it first copies the bytes to be copied into a temporary array
+	then pastes them into the destination
+ 	memcpy copies directly from the source to the destination
+*/

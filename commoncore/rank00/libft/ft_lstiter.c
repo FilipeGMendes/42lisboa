@@ -6,7 +6,7 @@
 /*   By: fguerrei <fguerrei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 14:30:35 by fguerrei          #+#    #+#             */
-/*   Updated: 2024/04/29 11:13:20 by fguerrei         ###   ########.fr       */
+/*   Updated: 2024/05/01 11:40:30 by fguerrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,3 +23,7 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 		temp = temp->next;
 	}
 }
+/* this function iterates over the whole list
+	and apples the function f ot the content
+	of each elements
+*/

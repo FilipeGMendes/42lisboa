@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fguerrei <fguerrei@student.42.fr>          +#+  +:+       +#+        */
+/*   By: fguerrei <filipe0505mendes@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 14:51:13 by fguerrei          #+#    #+#             */
-/*   Updated: 2024/04/30 12:01:14 by fguerrei         ###   ########.fr       */
+/*   Updated: 2024/05/01 13:49:35 by fguerrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,9 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	
 	printf("%zu", dest1);
 }*/
-//the function copies one string to another 
-//it always null terminate the string
-//if size is long enough, it simply copies the string
-//if size is not long enough, it copies size - 1 characters, adding the NULL character
+/*	the function copies one string to another 
+	it always null terminate the string
+	if size is long enough, it simply copies the string
+	if size is not long enough, it copies size - 1 characters,
+	adding the NULL character
+*/

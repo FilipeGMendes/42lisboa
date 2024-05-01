@@ -6,7 +6,7 @@
 /*   By: fguerrei <fguerrei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 10:36:54 by fguerrei          #+#    #+#             */
-/*   Updated: 2024/04/30 10:36:56 by fguerrei         ###   ########.fr       */
+/*   Updated: 2024/05/01 10:38:57 by fguerrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,3 +35,11 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (NULL);
 }
+/*int main()
+{
+	printf("%s\n", ft_strnstr("w o r l d", "World",9));
+}*/
+/* this function works like strchr
+	this one searches for a complete substring
+	in max len characters
+*/

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fguerrei <fguerrei@student.42.fr>          +#+  +:+       +#+        */
+/*   By: fguerrei <filipe0505mendes@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 12:08:35 by fguerrei          #+#    #+#             */
-/*   Updated: 2024/04/30 12:07:02 by fguerrei         ###   ########.fr       */
+/*   Updated: 2024/05/01 13:49:03 by fguerrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	
 	printf("%zu\n", ft_strlcat(dest, "lorem", 15));
 }*/
-//this function concatenate two strings and it always null terminate the string
-//if size is long enough, it simply concatenates the two string
-//if size is not long enough, it concatenates size - strlen(dest) - 1 characters, adding the NULL character
+/*	this function concatenate two strings and it always null terminate the string
+	if size is long enough, it simply concatenates the two string
+	if size is not long enough, 
+	it concatenates size - strlen(dest) - 1 characters, adding the NULL character
+*/

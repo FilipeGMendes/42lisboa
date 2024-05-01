@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fguerrei <fguerrei@student.42.fr>          +#+  +:+       +#+        */
+/*   By: fguerrei <filipe0505mendes@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 10:37:38 by fguerrei          #+#    #+#             */
-/*   Updated: 2024/04/30 12:19:06 by fguerrei         ###   ########.fr       */
+/*   Updated: 2024/05/01 13:50:43 by fguerrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,4 +16,7 @@ int	ft_tolower(int c)
 		return (c + 32);
 	return (c);
 }
-//this function converts an upper case alphabetical character to a lower case charater;
+/*	this function converts 
+	an upper case alphabetical character 
+	to a lower case charater
+*/

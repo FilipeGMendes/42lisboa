@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fguerrei <fguerrei@student.42.fr>          +#+  +:+       +#+        */
+/*   By: fguerrei <filipe0505mendes@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 10:33:40 by fguerrei          #+#    #+#             */
-/*   Updated: 2024/04/30 10:53:53 by fguerrei         ###   ########.fr       */
+/*   Updated: 2024/05/01 13:46:57 by fguerrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,9 @@ int	ft_isalnum(int c)
 
 	return 0;
 }*/
-//function to to check if a character is an alphabetical letter or a decimal digit
-//returns 1 if it is
-//returns 0 if it is not
+/*	function to to check if a character is
+	an alphabetical letter 
+	or a decimal digit
+	returns 1 if it is
+	returns 0 if it is not
+*/

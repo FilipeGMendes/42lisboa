@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fguerrei <fguerrei@student.42.fr>          +#+  +:+       +#+        */
+/*   By: fguerrei <filipe0505mendes@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 13:35:58 by fguerrei          #+#    #+#             */
-/*   Updated: 2024/04/30 12:23:16 by fguerrei         ###   ########.fr       */
+/*   Updated: 2024/05/01 13:48:36 by fguerrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,7 @@ char	*ft_strchr(const char *s, int c)
 
 	printf("%s\n", strchr("abacate", 'c'));
 }*/
-//this function searches for one character in a string
-//if the characters if found it returns a pointer to the first occurrence of the specific character
+/*	this function searches for one character in a string
+	if the characters if found
+	it returns a pointer to the first occurrence of the specific character
+*/

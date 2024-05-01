@@ -6,7 +6,7 @@
 /*   By: fguerrei <fguerrei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 10:35:54 by fguerrei          #+#    #+#             */
-/*   Updated: 2024/04/30 10:35:56 by fguerrei         ###   ########.fr       */
+/*   Updated: 2024/05/01 11:28:17 by fguerrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,3 +34,5 @@ void	ft_putnbr_fd(int n, int fd)
 			ft_putchar_fd(n + '0', fd);
 	}
 }
+/* this one works like putnbr
+*/

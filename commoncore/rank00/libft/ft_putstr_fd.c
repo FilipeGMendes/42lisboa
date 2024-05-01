@@ -6,7 +6,7 @@
 /*   By: fguerrei <fguerrei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 10:36:02 by fguerrei          #+#    #+#             */
-/*   Updated: 2024/04/30 10:36:04 by fguerrei         ###   ########.fr       */
+/*   Updated: 2024/05/01 11:25:45 by fguerrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,3 +23,6 @@ void	ft_putstr_fd(char *s, int fd)
 		i++;
 	}
 }
+/* this works the same way as ft_putchar_fd
+	but with a string
+*/

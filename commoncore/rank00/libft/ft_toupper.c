@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fguerrei <fguerrei@student.42.fr>          +#+  +:+       +#+        */
+/*   By: fguerrei <filipe0505mendes@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 10:37:31 by fguerrei          #+#    #+#             */
-/*   Updated: 2024/04/30 12:18:45 by fguerrei         ###   ########.fr       */
+/*   Updated: 2024/05/01 13:51:07 by fguerrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,4 +16,7 @@ int	ft_toupper(int c)
 		return (c - 32);
 	return (c);
 }
-//this function converts a lower case alphabetical character to an upper case charater;
+/*	this function converts 
+	a lower case alphabetical character
+	to an upper case charater
+*/

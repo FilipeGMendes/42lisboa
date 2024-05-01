@@ -6,7 +6,7 @@
 /*   By: fguerrei <fguerrei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 14:40:43 by fguerrei          #+#    #+#             */
-/*   Updated: 2024/04/29 11:14:23 by fguerrei         ###   ########.fr       */
+/*   Updated: 2024/05/01 11:42:05 by fguerrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,3 +33,8 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	}
 	return (new_lst);
 }
+/* this function works similarly as the ft_lstiter
+	but it creates a new list resulting of
+	the successive applications of f
+	on each element's content
+*/

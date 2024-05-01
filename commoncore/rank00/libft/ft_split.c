@@ -6,7 +6,7 @@
 /*   By: fguerrei <fguerrei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 11:28:50 by fguerrei          #+#    #+#             */
-/*   Updated: 2024/04/29 10:58:03 by fguerrei         ###   ########.fr       */
+/*   Updated: 2024/05/01 11:06:08 by fguerrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,3 +73,24 @@ char	**ft_split(char const *s, char c)
 	result[i] = NULL;
 	return (result);
 }
+/*int main(void)
+{
+	char *str = "Hello I am here";
+	char **split = ft_split(str, ' ');
+	if (split)
+	{
+		for (int i = 0; split[i]; i++)
+			printf("%s\n", split[i]);
+	}
+	else
+	{
+		printf("Split failed\n");
+	}
+	return 0;
+}*/
+/*	this function takes a string s and splits it
+	to get an array containing each words of it
+	each word is separated by one or more c
+	c is the word delimiter
+	the words array must be NUL-terminated
+*/
