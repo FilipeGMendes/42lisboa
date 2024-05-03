@@ -1,27 +1,27 @@
-SRCS = ft_printf.c srcs/ft_printchar.c srcs/ft_printstr.c \
-       srcs/ft_printdigits.c
+NAME	=	libftprintf.a
 
-OBJS = ${SRCS:.c=.o}
+SRC	=	ft_printf.c	\
+		ft_printchar.c ft_printstr.c \
+		ft_printdigits.c
 
-NAME = libft.a
+OBJS = $(SRC:.c=.o)
+
 CC = cc
-RM = rm -f
-CFLAGS = -Wall -Wextra -Werror -I ./includes/
+CFLAGS = -Wall -Werror -Wextra
+RM = rm -rf
+AR = ar crs
 
-.c.o:
-	${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
+$(NAME): $(OBJS)
+	$(AR) $(NAME) $(OBJS)
 
-${NAME}: ${OBJS}
-	${NAME} ${OBJS}
-
-all: ${NAME}
+all: $(NAME)
 
 clean:
-	${RM} ${OBJS}
+	$(RM) $(OBJS)
 
-fclean: clean
-	${RM} ${NAME}
+fclean:	clean
+	$(RM) $(NAME)		
 
-re: fclean all
+re:	fclean all
 
-.PHONY : all bonus clean fclean re
+.PHONY:	all clean fclean re
