@@ -3,28 +3,28 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fguerrei <filipe0505mendes@gmail.com>      +#+  +:+       +#+        */
+/*   By: fguerrei <fguerrei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 10:32:57 by fguerrei          #+#    #+#             */
-/*   Updated: 2024/05/01 17:14:37 by fguerrei         ###   ########.fr       */
+/*   Updated: 2024/05/03 14:02:10 by fguerrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	put_format(char specifier, va_list ap)
+int	check_format(char specifier, va_list ap)
 {
 	int	i;
 
 	i = 0;
 	if (specifier == 'c')
-		i += ft_puchar(va_arg(ap, char));
+		i += ft_printchar(va_arg(ap, int));
 	else if (specifier == 's')
-		i += ft_putstr(va_arg(ap, char *));
+		i += ft_printstr(va_arg(ap, char *));
 	else if (specifier == 'd')
-		i += ft_putdigit(va_arg(ap, int), 10);
+		i += ft_printdigits(va_arg(ap, int), 10);
 	else if (specifier == 'x')
-		i += ft_putdigit(va_arg(ap, int), 16);
+		i += ft_printdigits(va_arg(ap, int), 16);
 	else
 		i += write(1, &specifier, 1);
 	return (i);
@@ -39,9 +39,9 @@ int	ft_printf(const char *format, ...)
 	i = 0;
 	while (*format)
 	{
-		if (format == '%')
+		if (*format == '%')
 		{
-			put_format(*(++format), ap);
+			check_format(*(++format), ap);
 			i++;
 		}
 		else

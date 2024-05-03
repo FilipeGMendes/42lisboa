@@ -1,22 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_printchar.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fguerrei <filipe0505mendes@gmail.com>      +#+  +:+       +#+        */
+/*   By: fguerrei <fguerrei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/01 12:29:33 by fguerrei          #+#    #+#             */
-/*   Updated: 2024/05/01 17:13:18 by fguerrei         ###   ########.fr       */
+/*   Created: 2024/05/03 13:53:58 by fguerrei          #+#    #+#             */
+/*   Updated: 2024/05/03 13:55:05 by fguerrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "ft_printf.h"
 
-# include "libft/libft.h"
-# include <stdarg.h>
-
-int		ft_printf(const char *str, ...);
-int		ft_putstr(char *str);
-
-#endif
+int		ft_putchar(char c)
+{
+	write(1, &c, 1);
+	return (1);
+}
