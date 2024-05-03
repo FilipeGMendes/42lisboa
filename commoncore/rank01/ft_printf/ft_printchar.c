@@ -6,14 +6,13 @@
 /*   By: fguerrei <fguerrei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 13:53:58 by fguerrei          #+#    #+#             */
-/*   Updated: 2024/05/03 13:55:05 by fguerrei         ###   ########.fr       */
+/*   Updated: 2024/05/03 16:52:29 by fguerrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int		ft_putchar(char c)
+int		ft_printchar(int c)
 {
-	write(1, &c, 1);
-	return (1);
+	return write(1, &c, 1);
 }
