@@ -6,7 +6,7 @@
 /*   By: fguerrei <fguerrei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 10:36:41 by fguerrei          #+#    #+#             */
-/*   Updated: 2024/05/01 11:20:11 by fguerrei         ###   ########.fr       */
+/*   Updated: 2024/05/07 14:54:13 by fguerrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,19 @@ char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 	str[i] = 0;
 	return (str);
 }
+/*char to_upper(unsigned int i, char c)
+{
+	i = 32;
+    return (c - i);
+
+}
+int main()
+{
+	char *str = "hello";
+	char *str2 = ft_strmapi(str, to_upper);
+	printf("%s\n", str2);
+
+}*/
 /*	this function takes two parameters
 	the first one is a string
 	the second one is a function
