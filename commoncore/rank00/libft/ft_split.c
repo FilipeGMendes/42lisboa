@@ -6,7 +6,7 @@
 /*   By: fguerrei <fguerrei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 11:28:50 by fguerrei          #+#    #+#             */
-/*   Updated: 2024/05/01 11:06:08 by fguerrei         ###   ########.fr       */
+/*   Updated: 2024/05/09 11:48:20 by fguerrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ static int	ft_countwords(char const *s, char c)
 	return (count);
 }
 
-char	*findchr(char *s, char c)
+static char	*findchr(char *s, char c)
 {
 	int	i;
 
@@ -77,10 +77,16 @@ char	**ft_split(char const *s, char c)
 {
 	char *str = "Hello I am here";
 	char **split = ft_split(str, ' ');
+	int i;
+
 	if (split)
 	{
-		for (int i = 0; split[i]; i++)
+		i = 0;
+		while (split[i])
+		{
 			printf("%s\n", split[i]);
+			i++;
+		}
 	}
 	else
 	{

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fguerrei <fguerrei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/09 15:54:14 by fguerrei          #+#    #+#             */
-/*   Updated: 2024/05/09 16:01:18 by fguerrei         ###   ########.fr       */
+/*   Created: 2024/04/30 10:34:26 by fguerrei          #+#    #+#             */
+/*   Updated: 2024/05/09 15:54:03 by fguerrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static int	countdigits(int n)
 	int	count;
 
 	count = 0;
-	if (n <= 0)
+	if (n < 0)
 		count++;
 	while (n)
 	{
@@ -30,26 +30,38 @@ static int	countdigits(int n)
 char	*ft_itoa(int n)
 {
 	char	*str;
-	long	nb;
+	int		len;
 	int		i;
 
-	nb = n;
-	i = countdigits(nb);
-	str = malloc(sizeof(char) * (i + 1));
+	len = countdigits(n);
+	str = malloc(sizeof(char) * (len + 1));
 	if (str == NULL)
 		return (NULL);
-	str[i] = '\0';
-	if (nb == 0)
-		str[0] = '0';
-	if (nb < 0 )
+	if (n == -2147483648)
+		return ("-2147483648");
+	i = len - 1;
+	if (n < 0)
 	{
 		str[0] = '-';
-		nb *= -1;
+		n *= -1;
 	}
-	while (nb)
+	while (n > 9)
 	{
-		str[--i] = nb % 10 + '0';
-		nb /= 10;
+		str[i] = n % 10 + '0';
+		n /= 10;
+		i--;
 	}
+	str[i] = n + '0';
+	str[len] = '\0';
 	return (str);
 }
+/*int main()
+{
+    char *str = ft_itoa(-2147483648LL);
+    printf("%s\n", str);
+    free(str);
+    return 0;
+}*/
+/*	this function does the opposite of atoi
+	converting a number to a string
+*/
