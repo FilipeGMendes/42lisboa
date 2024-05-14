@@ -6,29 +6,24 @@
 /*   By: fguerrei <fguerrei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 10:33:33 by fguerrei          #+#    #+#             */
-/*   Updated: 2024/05/13 11:21:05 by fguerrei         ###   ########.fr       */
+/*   Updated: 2024/05/14 18:08:18 by fguerrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t count, size_t size)
+void	*ft_calloc(size_t count, size_t element_size)
 {
 	void	*ptr;
+    size_t  size;
     
-    if (count == 0 && size == 0)
-		return (malloc(1));
-	if (size == 0 || count == 0)
-		return (malloc(0));
-    if (size == 0 || count == 0)
-        return (malloc(0));
-    if (size && count > SIZE_MAX / size)
+    size = count * element_size;
+    if (size && element_size && size > (UINT_MAX / element_size))
         return (NULL);
-	ptr = malloc(count * size);
+	ptr = (void *)malloc(size);
 	if (!ptr)
         return (NULL);
-	
-    ft_memset(ptr, 0, count * size);
+    ft_bzero(ptr, size);
 	return (ptr);
 }
 /*int main()

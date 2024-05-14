@@ -6,7 +6,7 @@
 /*   By: fguerrei <fguerrei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 14:19:56 by fguerrei          #+#    #+#             */
-/*   Updated: 2024/04/29 12:18:30 by fguerrei         ###   ########.fr       */
+/*   Updated: 2024/05/14 18:09:03 by fguerrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdlib.h>
 # include <string.h>
 # include <unistd.h>
+# include <limits.h>
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
