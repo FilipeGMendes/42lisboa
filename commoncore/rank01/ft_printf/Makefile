@@ -1,27 +1,30 @@
-NAME	=	libftprintf.a
+NAME	=	printflibft.a
 
-SRC	=	ft_printf.c	\
-		ft_printchar.c ft_printstr.c \
-		ft_printdigits.c
+SRCS	=	ft_printf.c \
+			ft_printchar.c ft_printstr.c ft_printdigits.c ft_printupperdigits.c
 
-OBJS = $(SRC:.c=.o)
+CC		=	@cc
+CFLAGS	=	-Wall -Werror -Wextra
+OBJS	=	${SRCS:.c=.o}
+OBJS_B	=	${SRC_B:.c=.o}
+RM		=	@rm -f
+LIBC	=	@ar -rcs
+INCS	=	.
 
-CC = cc
-CFLAGS = -Wall -Werror -Wextra
-RM = rm -rf
-AR = ar crs
+${NAME}: ${OBJS}
+	@echo "Created .o files."
+	${LIBC} ${NAME} ${OBJS}
 
-$(NAME): $(OBJS)
-	$(AR) $(NAME) $(OBJS)
+all: ${NAME}
 
-all: $(NAME)
+fclean: clean
+	${RM} ${NAME}
+	@echo "Cleaned printflibft.a."
 
 clean:
-	$(RM) $(OBJS)
+	${RM} -f ${OBJS}
+	@echo "Cleaned .o files."
 
-fclean:	clean
-	$(RM) $(NAME)		
+re: fclean all
 
-re:	fclean all
-
-.PHONY:	all clean fclean re
+.PHONY: all fclean clean re .c.o

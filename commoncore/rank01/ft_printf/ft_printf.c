@@ -6,7 +6,7 @@
 /*   By: fguerrei <fguerrei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 10:32:57 by fguerrei          #+#    #+#             */
-/*   Updated: 2024/05/03 16:38:49 by fguerrei         ###   ########.fr       */
+/*   Updated: 2024/05/20 19:24:21 by fguerrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ int	check_format(char specifier, va_list ap)
 		i += ft_printdigits((long)(va_arg(ap, int)), 10);
 	else if (specifier == 'x')
 		i += ft_printdigits((long)(va_arg(ap, unsigned int)), 16);
+	else if (specifier == 'X')
+		i += ft_printupperdigits((long)(va_arg(ap, unsigned int)), 16);
 	else
 		i += write(1, &specifier, 1);
 	return (i);

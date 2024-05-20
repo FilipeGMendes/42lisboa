@@ -9,11 +9,11 @@ SRCS	=	ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c f
 SRC_B	=	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c \
 		ft_lstclear.c ft_lstiter.c ft_lstmap.c \
 
-CC	=	@cc
+CC		=	@cc
 CFLAGS	=	-Wall -Werror -Wextra
 OBJS	=	${SRCS:.c=.o}
 OBJS_B	=	${SRC_B:.c=.o}
-RM	=	@rm -f
+RM		=	@rm -f
 LIBC	=	@ar -rcs
 INCS	=	.
 
