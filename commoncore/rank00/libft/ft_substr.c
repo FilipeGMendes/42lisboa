@@ -6,7 +6,7 @@
 /*   By: fguerrei <fguerrei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 10:37:03 by fguerrei          #+#    #+#             */
-/*   Updated: 2024/05/01 10:48:46 by fguerrei         ###   ########.fr       */
+/*   Updated: 2024/05/20 14:29:52 by fguerrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,11 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	if (!s)
 		return (NULL);
+	if (start > ft_strlen(s))
+		return (ft_strdup(""));
 	if (len > ft_strlen(s + start))
 		len = ft_strlen(s + start);
-	subs = ft_calloc(sizeof(char), len + 1);
+	subs = ft_calloc(len + 1, sizeof(char));
 	if (!subs)
 		return (NULL);
 	i = 0;
