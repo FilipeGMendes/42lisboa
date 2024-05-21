@@ -6,7 +6,7 @@
 /*   By: fguerrei <fguerrei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 10:33:33 by fguerrei          #+#    #+#             */
-/*   Updated: 2024/05/14 18:08:18 by fguerrei         ###   ########.fr       */
+/*   Updated: 2024/05/21 14:42:12 by fguerrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,15 @@
 void	*ft_calloc(size_t count, size_t element_size)
 {
 	void	*ptr;
-    size_t  size;
-    
-    size = count * element_size;
-    if (size && element_size && size > (UINT_MAX / element_size))
-        return (NULL);
+	size_t	size;
+
+	size = count * element_size;
+	if (size && element_size && size > (UINT_MAX / element_size))
+		return (NULL);
 	ptr = (void *)malloc(size);
 	if (!ptr)
-        return (NULL);
-    ft_bzero(ptr, size);
+		return (NULL);
+	ft_bzero(ptr, size);
 	return (ptr);
 }
 /*int main()

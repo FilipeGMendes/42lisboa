@@ -6,7 +6,7 @@
 /*   By: fguerrei <fguerrei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 12:08:35 by fguerrei          #+#    #+#             */
-/*   Updated: 2024/05/06 11:08:45 by fguerrei         ###   ########.fr       */
+/*   Updated: 2024/05/21 14:40:54 by fguerrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	
 	printf("%zu\n", ft_strlcat(dest, "lorem", 15));
 }*/
-/*	this function concatenate two strings and it always null terminate the string
+/*	this function concatenate two strings
+	it always null terminate the string
 	if size is long enough, it simply concatenates the two string
 	if size is not long enough, 
 	it concatenates size - strlen(dest) - 1 characters, adding the NULL character

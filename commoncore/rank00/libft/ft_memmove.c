@@ -6,7 +6,7 @@
 /*   By: fguerrei <fguerrei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 12:39:15 by fguerrei          #+#    #+#             */
-/*   Updated: 2024/05/20 14:19:45 by fguerrei         ###   ########.fr       */
+/*   Updated: 2024/05/21 14:39:37 by fguerrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	char *d;
-	char *s;
+	char	*d;
+	char	*s;
 
 	d = (char *)dest;
 	s = (char *)src;
@@ -31,7 +31,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	else
 	{
-			ft_memcpy(d, s, n);
+		ft_memcpy(d, s, n);
 	}
 	return (dest);
 }
