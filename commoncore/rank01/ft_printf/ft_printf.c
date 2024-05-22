@@ -6,7 +6,7 @@
 /*   By: fguerrei <fguerrei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 10:32:57 by fguerrei          #+#    #+#             */
-/*   Updated: 2024/05/21 14:27:00 by fguerrei         ###   ########.fr       */
+/*   Updated: 2024/05/22 17:42:52 by fguerrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,9 @@ int	check_format(char specifier, va_list ap)
 		i += ft_printchar(va_arg(ap, int));
 	else if (specifier == 's')
 		i += ft_printstr(va_arg(ap, char *));
-	else if (specifier == 'd')
+	else if (specifier == 'p')
+		i += ft_printptr(va_arg(ap, unsigned long long));
+	else if (specifier == 'd' || specifier == 'i')
 		i += ft_printdigits((long)(va_arg(ap, int)), 10);
 	else if (specifier == 'x')
 		i += ft_printdigits((long)(va_arg(ap, unsigned int)), 16);
@@ -42,15 +44,9 @@ int	ft_printf(const char *format, ...)
 	while (*format)
 	{
 		if (*format == '%')
-		{
-			check_format(*(++format), ap);
-			i++;
-		}
+			i += check_format(*(++format), ap);
 		else
-		{
-			write(1, format, 1);
-			i++;
-		}
+			i += write(1, format, 1);
 		format++;
 	}
 	va_end(ap);
@@ -59,6 +55,10 @@ int	ft_printf(const char *format, ...)
 
 /*int main()
 {
-	ft_printf("Hello %sWorld");
-	return (0);
+	int	i;
+
+	i = ft_printf("%x\n", 42);
+	ft_printf("Number of chars is %d\n", i);
+	i = printf("%x\n", 42);
+	printf("Number of chars is %d\n", i);
 }*/
