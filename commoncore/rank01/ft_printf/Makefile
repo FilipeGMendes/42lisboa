@@ -2,7 +2,7 @@ NAME	=	libftprintf.a
 
 SRCS	=	ft_printf.c \
 			ft_printchar.c ft_printstr.c \
-			ft_printptr.c \
+			ft_printptr.c ft_printunsigned.c \
 			ft_printdigits.c ft_printupperdigits.c
 
 CC		=	@cc
