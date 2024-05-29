@@ -6,7 +6,7 @@
 /*   By: fguerrei <fguerrei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 13:53:58 by fguerrei          #+#    #+#             */
-/*   Updated: 2024/05/03 16:52:29 by fguerrei         ###   ########.fr       */
+/*   Updated: 2024/05/29 18:36:40 by fguerrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int		ft_printchar(int c)
 {
-	return write(1, &c, 1);
+	return (write(1, &c, 1));
 }

@@ -6,7 +6,7 @@
 /*   By: fguerrei <fguerrei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 10:32:57 by fguerrei          #+#    #+#             */
-/*   Updated: 2024/05/23 23:27:18 by fguerrei         ###   ########.fr       */
+/*   Updated: 2024/05/29 18:50:34 by fguerrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	check_format(char specifier, va_list ap)
 	else if (specifier == 'X')
 		i += ft_printupperdigits((long)(va_arg(ap, unsigned int)), 16);
 	else
-		i += write(1, &specifier, 1);
+		i += write(1, "%", 1);
 	return (i);
 }
 
@@ -41,14 +41,21 @@ int	ft_printf(const char *format, ...)
 	va_list	ap;
 	long int i;
 	
-	va_start(ap, format);
 	i = 0;
+	if (!format)
+		return (-1);
+	va_start(ap, format);
 	while (*format)
 	{
 		if (*format == '%')
-			i += check_format(*(++format), ap);
+		{
+			format++;
+			if(!format)
+				return (i);
+			i += check_format(*format, ap);
+		}
 		else
-			i += write(1, format, 1);
+			i += ft_printchar(*format);
 		format++;
 	}
 	va_end(ap);
@@ -57,10 +64,6 @@ int	ft_printf(const char *format, ...)
 
 /*int main()
 {
-	int	i;
-
-	i = ft_printf("%x\n", 42);
-	ft_printf("Number of chars is %d\n", i);
-	i = printf("%x\n", 42);
-	printf("Number of chars is %d\n", i);
+	ft_printf(" %c %c %c \n", '0', 0, '1');
+	printf(" %c %c %c \n", '0', 0, '1');
 }*/

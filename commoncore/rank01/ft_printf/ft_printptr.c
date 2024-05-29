@@ -6,7 +6,7 @@
 /*   By: fguerrei <fguerrei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 17:20:33 by fguerrei          #+#    #+#             */
-/*   Updated: 2024/05/22 17:40:23 by fguerrei         ###   ########.fr       */
+/*   Updated: 2024/05/29 18:41:08 by fguerrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,10 @@ int	ft_printptr(unsigned long long ptr)
 	i = 0;
 	i += write(1, "0x", 2);
 	if (ptr == 0)
+	{
 		i += write(1, "0", 1);
+		return (3);
+	}
 	else
 	{
 		ft_put_ptr(ptr);
