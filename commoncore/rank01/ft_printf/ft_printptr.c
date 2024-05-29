@@ -6,7 +6,7 @@
 /*   By: fguerrei <fguerrei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 17:20:33 by fguerrei          #+#    #+#             */
-/*   Updated: 2024/05/29 18:41:08 by fguerrei         ###   ########.fr       */
+/*   Updated: 2024/05/29 18:56:21 by fguerrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ int	ft_ptr_len(uintptr_t num)
 }
 void ft_put_ptr(uintptr_t num)
 {
+	if (num == 0)
+		ft_printchar('0');
 	if (num >= 16)
 	{
 		ft_put_ptr(num / 16);
